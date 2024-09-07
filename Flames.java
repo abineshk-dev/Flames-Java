@@ -12,7 +12,6 @@ class Flames{
                         System.out.println();
 			System.out.print("Enter Your Partner Name : ");
 			String femaleName=sc.nextLine();
-
 			char[] male= new char[maleName.length()];
 			char[] female= new char[femaleName.length()];
 
@@ -38,7 +37,8 @@ class Flames{
 				if(male[i]=='*')
 					count++;
 			}
-			//total varible represent the remaiming char length after striked 
+
+			//total varible represent the remaiming char length after striked with "*"
 			int total=(male.length-count)+(female.length-count);
 
 			//System.out.println(male);
@@ -54,8 +54,9 @@ class Flames{
 			list.insertatfirst("Love");
 			list.insertatfirst("Friends");
 
-			//finding the result by using list's method 
+			//finding the result by using list's methods
 			list.traverseNew(total);
+			if(total>4)
 			list.display();
 	}
 }
