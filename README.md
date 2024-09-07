@@ -47,3 +47,7 @@ The `Flames` class is the main driver of the game.
 ```sh
 Enter Your Name: John
 Enter Your Partner's Name: Jane
+
+Output:
+You And Your Partner's Result Is: Affection
+```
