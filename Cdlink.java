@@ -6,7 +6,7 @@ Cdlink(){
 	tail=null;
 }
 
-// creating node
+//creating node
 class cdnode {
    cdnode next;
    cdnode prev;
@@ -20,7 +20,7 @@ class cdnode {
    }	
 }
 
-//inserting values in the list at first position
+//inserting element at first node in the list
 public void insertatfirst(String val) {
 	cdnode newnode=new cdnode(val);
 	if(head==null) {
@@ -38,34 +38,48 @@ public void insertatfirst(String val) {
 	    head=newnode;
 }
 
-//traversing the list to find the result
+//traversing list for result
 public void traverseNew(int val) {
 	int count=val;
     cdnode temp=tail;
-    for(int j=count;j>0;j--) {
-  for(int i=1;i<=count;i++) {
-	  temp=temp.next;
-  }
-   //System.out.println("current node "+temp.data);
-   delete(temp.data);
+    if(count<=4) {
+    	if(count==4||count==2) {
+    	System.out.println("You And Your Partners Result Is enemy");
+    	}
+    	else if(count==3) {
+        	System.out.println("You And Your Partners Result Is friendship");
+    	}
+    	else if(count==1) {
+        	System.out.println("You And Your Partners Result Is sister");
+    	}
+    	else
+    		System.out.println("linking not possible hahahahaha");
     }
+    else {
+    for(int j=count;j>0;j--) {
+  for(int i=1;i<=count;i++)
+	  temp=temp.next;
+  //System.out.println("current node "+ temp.data);
+   delete(temp.data);
 }
+    }
+    }
 
-//for delete method 
+//for deleting purpose
 public void deleteatfirst(){
 	head=head.next;
 	head.prev=tail;
 	tail.next=head;	
 }
 
-//for delete method
+//for deleting purpose
 public void deleteatend() {
 	tail=tail.prev;
 	tail.next=head;
 	head.prev=tail;	
 }
 
-//displaying the result
+//to display the result
 public void display() {
 	cdnode temp=head;
 	do {
@@ -74,7 +88,7 @@ public void display() {
 	}while(temp!=head);
 }
 
-//for deleting the flames values
+//for deleting purpose
 public void delete(String val) {
 	cdnode temp=head;
 	if(val==head.data) {
