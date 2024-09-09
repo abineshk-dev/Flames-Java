@@ -40,12 +40,7 @@ class Flames{
 
 			//total varible represent the remaiming char length after striked with "*"
 			int total=(male.length-count)+(female.length-count);
-
-			//System.out.println(male);
-			//System.out.println(female);
-			//System.out.println(count);
-			//System.out.println(total);
-
+			
 			//inserting flames abbrevations in list
 			list.insertatfirst("Siblings");
 			list.insertatfirst("Enemy");
